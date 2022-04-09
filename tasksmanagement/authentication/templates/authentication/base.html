@@ -8,6 +8,13 @@
         <link rel ="stylesheet" href="{% static 'authentication/css/bootstrap.css' %}">
     </head>
     <body>
+        {% if messages %}
+         {% for message in messages %}
+          <small {% if message.tags %} class="{{message.tags}}" {% endif%}>{{message}}</small>
+         {%endfor%}
+        {%endif%}
+        <!--<a href= "{% url 'generate' %}" class="btn btn-info"> Bulk Add</a>-->
+
         <div class="container mt-5">
             <h2 class ="text-center alert alert-danger">Tasks CRUD Operations </h2>
             {% block content %} {% endblock content %}
