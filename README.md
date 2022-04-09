@@ -21,6 +21,7 @@ Tech stacks used in the Project are:-
 Python , 
 Django , 
 Html , 
+CSS , 
 Bootstrap .
 
 Database used:-
