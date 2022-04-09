@@ -35,8 +35,8 @@
                 <td>{{st.status}}</td>
                 <!--<td><input type="checkbox" name="task_id[]" value="={{st.id}}" id = "bulk_delete"></td>-->
                 <td>
-                  <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
-                    <form action ="{% url 'deletedata' st.id %}" method ="post" class="d-inline">
+                  <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm" data-inline="true">Edit</a>
+                    <form action ="{% url 'deletedata' st.id %}" method ="post" data-inline="true"">
                         {% csrf_token %}
                         <input type="submit" class = "btn btn-danger" value="Delete">
                     </form>
